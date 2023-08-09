@@ -1,1 +1,3 @@
-export const enum QueryKey {}
+export const enum QueryKey {
+  GET_BOARD = '/boards'
+}
