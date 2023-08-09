@@ -33,6 +33,7 @@ module.exports = {
       }
     ],
     'import/no-named-as-default': 'off',
+    'import/no-unresolved': 'off',
     'react-hooks/exhaustive-deps': 'off',
     '@next/next/no-html-link-for-pages': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
