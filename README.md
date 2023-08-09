@@ -1,38 +1,23 @@
-# nextjs template default
+# board-example
 
 ## Introduction
 
-기본적으로 사용되는 라이브러리 구성과 환경설정이 갖춰진 Nextjs 기반 템플릿입니다.
-
-
-## Used Library
-### Core
-* Typescript
-* Next.js
-* react-query
-* recoil
-* styled-components
-
-### Util
-* axios
-* dayjs
-
-### Config
-* husky
-  * lint-staged 
+게시글과 댓글을 작성, 수정, 삭제할 수 있는 간단한 게시판 구현입니다.
 
 ## Initial Setting
-프로젝트 생성 시 github package 사용을 위해 .npmrc 파일 세팅이 필요합니다.
 
-공개 패키지이지만 사용 시 접근 권한 토큰이 필요합니다.
+시작 전 mock server 실행이 필요합니다.
 
 ```bash
-//npm.pkg.github.com/:_authToken=[[package read token]]
-@cherr0:registry=https://npm.pkg.github.com/
+cd server
+
+yarn start
 ``` 
 
 ## Getting Started
 
-상단의 `use this template` -> `Create a new repository` 를 눌러 신규 레포지토리 생성
+```bash
+yarn dev
+```
 
 

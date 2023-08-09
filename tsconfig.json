@@ -1,5 +1,4 @@
 {
-  "extends": "@cherr0/fe-config-package/tsconfig/next.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
@@ -7,7 +6,37 @@
         "src/*"
       ]
     },
-    "allowJs": true
+    "composite": false,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "strictNullChecks": false,
+    "strictPropertyInitialization": false,
+    "incremental": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "lib": [
+      "ES2021",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "jsx": "preserve",
+    "noEmit": true,
+    "target": "esnext",
+    "allowJs": true,
+    "strict": false
   },
   "include": [
     "next-env.d.ts",
