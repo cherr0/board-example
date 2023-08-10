@@ -12,8 +12,11 @@ import { ThemeProvider } from 'styled-components'
 
 import MainLayout from './src/root/main-layout'
 
+import { startMirage } from '~/lib/mirage/config'
 import GlobalStyle from '~/styles/global-style'
 import { defaultTheme } from '~/styles/theme'
+
+startMirage()
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const queryClientRef = useRef<QueryClient>()

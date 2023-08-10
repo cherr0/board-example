@@ -6,12 +6,8 @@
 
 ## Initial Setting
 
-시작 전 mock server 실행이 필요합니다.
-
 ```bash
-cd server
-
-yarn start
+yarn install
 ``` 
 
 ## Getting Started
