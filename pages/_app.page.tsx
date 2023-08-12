@@ -10,8 +10,6 @@ import { useRef } from 'react'
 import { RecoilRoot } from 'recoil'
 import { ThemeProvider } from 'styled-components'
 
-import MainLayout from './src/root/main-layout'
-
 import { startMirage } from '~/lib/mirage/config'
 import GlobalStyle from '~/styles/global-style'
 import { defaultTheme } from '~/styles/theme'
@@ -40,11 +38,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <QueryClientProvider client={queryClientRef.current}>
           <Hydrate>
             <RecoilRoot>
+              <Component {...pageProps} />
               <GlobalStyle />
-              <MainLayout>
-                <Component {...pageProps} />
-                <ReactQueryDevtools />
-              </MainLayout>
+              <ReactQueryDevtools />
             </RecoilRoot>
           </Hydrate>
         </QueryClientProvider>

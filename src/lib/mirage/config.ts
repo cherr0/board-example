@@ -5,7 +5,6 @@ import { endpoints } from './endpoints'
 import { factories } from './factories'
 import { models } from './models'
 
-import Config from '~/constants/config'
 import { DefinitionKey } from '~/constants/mirage'
 
 export function startMirage() {
@@ -20,8 +19,6 @@ export function startMirage() {
       )
     }
   })
-  // logging
-  server.logging = true
 
   // internal URLs
   for (const namespace of Object.keys(endpoints)) {
@@ -29,5 +26,4 @@ export function startMirage() {
   }
 
   server.passthrough()
-  console.log({ dump: JSON.stringify(server.db.dump()) })
 }

@@ -1,11 +1,20 @@
 import type { NextPage } from 'next'
 
-import useBoardQuery from './src/domain/hooks/useBoardQuery'
+import BoardList from './src/domain/features/board-list'
+import ListHeader from './src/domain/features/list-header'
+
+import AsyncBoundary from 'src/components/container/async-boundary'
+import MainLayout from 'src/components/ui/main-layout'
 
 const Home: NextPage = () => {
-  const { data } = useBoardQuery()
-
-  return <div>homepage</div>
+  return (
+    <MainLayout>
+      <ListHeader />
+      <AsyncBoundary>
+        <BoardList />
+      </AsyncBoundary>
+    </MainLayout>
+  )
 }
 
 export default Home
